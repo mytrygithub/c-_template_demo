@@ -1,2 +1,2 @@
-# c-_template_demo
+# cpp_template_demo
 c++ template demo code
