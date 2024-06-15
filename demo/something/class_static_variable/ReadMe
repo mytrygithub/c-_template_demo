@@ -1,0 +1,3 @@
+struct static variable 多个该类变量输出
+
+声明方式：int my_test_class::a = 1; 也就是只有一个变量，全局唯一
