@@ -16,8 +16,20 @@ void test_is_constructible() {
 	//printf_type_info("true_flag",  typeid(true_flag).name());
 }
 
+struct A { A (int,int) {}; };
+
 int main() {
 	test_is_constructible();
+
+	cout << std::boolalpha;
+	cout << "is_constructible:" << endl;
+	cout << "int: " << is_constructible<int>::value << endl;
+	cout << "int(float): " << is_constructible<int,float>::value << endl;
+	cout << "int(float,float): " << is_constructible<int,float,float>::value << endl;
+	cout << "A: " << is_constructible<A>::value << endl;
+	cout << "A(int): " << is_constructible<A,int>::value << endl;
+	cout << "A(int,int): " << is_constructible<A,int,int>::value << endl;
+	cout << "A(int,int,int): " << is_constructible<A,int,int,int>::value << endl;
 
 	return 0;
 }
