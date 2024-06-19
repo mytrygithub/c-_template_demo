@@ -1,0 +1,10 @@
+map 占用空间分析
+
+
+// tree node
+// 3*ptr(parent left right) + my_Rb_tree_color tree node 32 应该是有struct对齐
+//
+
+// k int v int
+// tree node  + 1*pair<k,v> 32+1*8 40   malloc 40 统计结果为48,这是实现相关忽略就可以
+//
