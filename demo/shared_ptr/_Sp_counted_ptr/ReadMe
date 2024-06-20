@@ -1,0 +1,20 @@
+分析 _Sp_counted_ptr new 占用空间大小
+
+带有虚函数的类会有虚地址表指针占用空间，注意不要忽略
+
+```
+[_Sp_counted_ptr]$ ./test
+test_base size:16
+test_derived size:24
+_Mutex_base size:1
+tmp_base1 size:1
+tmp_derived size:4
+tmp_base_virtual size:8
+tmp_derived_virtual size:16
+```
+
+待分析 这里的16代表什么内容
+```
+(gdb) p *virtual_base_ptr
+$1 = {_vptr.tmp_base_virtual = 0x401868 <vtable for tmp_base_virtual+16>, a = 0}
+```
