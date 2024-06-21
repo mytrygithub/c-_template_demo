@@ -1,0 +1,29 @@
+写个demo存储在hash和map中,查询使用hash,对比性能提高多少，或者能否提高
+
+
+```
+test1.cc
+top 1.4G
+
+[lfz@iZ2ze64f3bydewrpiewdhuZ hash_sort_data]$ ./test
+insert
+print_process_time:18478
+get_sort_data
+print_process_time:6813.8
+get_hash_data
+print_process_time:1359.65
+sort data size:10M
+```
+
+```
+top 1.4G
+
+[lfz@iZ2ze64f3bydewrpiewdhuZ hash_sort_data]$ ./test
+insert
+print_process_time:18365.4
+get_sort_data
+print_process_time:6946.81
+get_hash_data
+print_process_time:1368.56
+sort data size:10M
+```
